@@ -13,3 +13,10 @@ www/node_modules/
 www/dist/
 www/.bin/
 pkg/package.json.bak
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
