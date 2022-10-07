@@ -150,6 +150,7 @@ pub use error::KyberError;
 pub use kex::*;
 pub use params::*;
 pub use rand_core::{CryptoRng, RngCore};
+pub use symmetric::kdf;
 
 // Feature hack to expose private functions for the Known Answer Tests
 // and fuzzing. Will fail to compile if used outside `cargo test` or

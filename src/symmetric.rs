@@ -123,12 +123,12 @@ pub(crate) fn prf(out: &mut [u8], outbytes: usize, key: &[u8], nonce: u8) {
 }
 
 #[cfg(not(feature = "90s"))]
-pub(crate) fn kdf(out: &mut [u8], input: &[u8], inlen: usize) {
+pub fn kdf(out: &mut [u8], input: &[u8], inlen: usize) {
     shake256(out, KYBER_SSBYTES, input, inlen);
 }
 
 #[cfg(feature = "90s")]
-pub(crate) fn kdf(out: &mut [u8], input: &[u8], inlen: usize) {
+pub fn kdf(out: &mut [u8], input: &[u8], inlen: usize) {
     let mut hasher = Sha256::new();
     hasher.update(&input[..inlen]);
     let digest = hasher.finalize();
